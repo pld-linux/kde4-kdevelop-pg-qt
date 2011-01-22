@@ -16,7 +16,9 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}/%{version}/src/%{orgname
 # Source0-md5:	06e25c81cc34a5bddda3091ed3280e71
 URL:		http://www.kdevelop.org/
 BuildRequires:	automoc4
+BuildRequires:	bison
 BuildRequires:	cmake >= 2.8.0
+BuildRequires:	flex
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
