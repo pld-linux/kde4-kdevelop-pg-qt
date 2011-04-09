@@ -1,19 +1,16 @@
-#
-# Conditional build:
-#
 %define		_state		stable
-%define		kdever		4.5.2
-%define		qtver		4.7.0
+%define		kdever		4.6.2
+%define		qtver		4.7.2
 %define		orgname		kdevelop-pg-qt
 
 Summary:	The parser-generator from KDevplatform
 Name:		kde4-kdevelop-pg-qt
-Version:	0.9.0
+Version:	0.9.5
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	06e25c81cc34a5bddda3091ed3280e71
+# Source0-md5:	4818af0deea47d583adff7c134d62e08
 URL:		http://www.kdevelop.org/
 BuildRequires:	automoc4
 BuildRequires:	bison
@@ -22,7 +19,7 @@ BuildRequires:	flex
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,9 +33,6 @@ for some KDevelop-languagesupport-plugins (Ruby, PHP, Java...).
 install -d build
 cd build
 %cmake \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DSYSCONF_INSTALL_DIR=%{_sysconfdir} \
 	../
 %{__make}
 
