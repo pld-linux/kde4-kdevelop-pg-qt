@@ -6,7 +6,7 @@
 Summary:	The parser-generator from KDevplatform
 Name:		kde4-kdevelop-pg-qt
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.bz2
