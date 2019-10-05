@@ -6,11 +6,12 @@
 Summary:	The parser-generator from KDevplatform
 Name:		kde4-kdevelop-pg-qt
 Version:	1.0.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.bz2
 # Source0-md5:	155f4e9a3a6d34ebe756c2a16169706f
+Patch0:		flex.patch
 URL:		http://www.kdevelop.org/
 BuildRequires:	automoc4
 BuildRequires:	bison
@@ -28,6 +29,7 @@ for some KDevelop-languagesupport-plugins (Ruby, PHP, Java...).
 
 %prep
 %setup -q -n %{orgname}-%{version}
+%patch0 -p1
 
 %build
 install -d build
